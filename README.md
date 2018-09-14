@@ -37,8 +37,8 @@ requests
 
 4. 生成并同步表
 
-python manage.py makemigrations
-python manage.py migrate
+> python manage.py makemigrations
+> python manage.py migrate
 
 启动项目，打开"127.0.0.1:8000/xadmin"进入后台登录页面，输入用户名和密码进入后台
 
@@ -91,7 +91,7 @@ class UsersConfig(AppConfig):
     verbose_name = u"中文名称"  # Python2
 
 ```
-更改 init .py文件
+更改 __init__.py 文件
 ```
 default_app_config = "users.apps.UsersConfig"  # users为当前app名称
 ```

@@ -2,7 +2,7 @@
 
 ## 安装xadmin
 
-### 注意：切勿pip install 方式安装！不然最后数据库表会因缺失log表引发错误
+### 注意：切勿pip install 方式安装！不然同步数据库会因缺失log表引发错误
 
 1. 下载对应Django版本的xadmin，解压并将其中的xadmin文件夹全部复制到自己的项目下（app同级目录），然后在 settings.py文件的INSTALLED_APPS内添加以下代码：
 ```

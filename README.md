@@ -22,7 +22,7 @@ urlpatterns = [
 ```
 
 3. 使用pip install安装以下依赖库：
-
+```
 six
 future
 httplib2
@@ -31,7 +31,7 @@ django-formtools
 django-crispy-forms
 django-import-export
 requests
-
+```
 
 如果还提示缺少某个模块，安装即可。
 

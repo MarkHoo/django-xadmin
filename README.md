@@ -97,3 +97,4 @@ class UsersConfig(AppConfig):
 default_app_config = "users.apps.UsersConfig"  # users为当前app名称
 ```
 
+更多详细： https://xadmin.readthedocs.io/en/latest/index.html

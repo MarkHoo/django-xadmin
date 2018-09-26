@@ -27,7 +27,10 @@ PLUGINS = (
     'sitemenu', 
     'language', 
     'quickfilter',
-    'sortablelist'
+    'sortablelist',
+	'importexport',
+    'ueditor',
+    'excel',
 )
 
 

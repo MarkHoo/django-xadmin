@@ -97,4 +97,50 @@ class UsersConfig(AppConfig):
 default_app_config = "users.apps.UsersConfig"  # users为当前app名称
 ```
 
+### 定制后台用户信息页面。
+- UserProfile, UserProfileAdmin相关联并注册，同时卸载后台中默认显示的‘用户信息’一栏
+- 用户信息的定制是在xadmin中plugins中的auth.py中修改
+
+```
+from xadmin.layout import Fieldset, Main, Side, Row
+from xadmin.plugins.auth import UserAdmin
+from .models import UserProfile
+
+
+from django.contrib.auth.models import User
+xadmin.site.unregister(User)
+xadmin.site.register(UserProfile, UserProfileAdmin)
+```
+
+### 更换后台icon图标
+
+```
+model_icon = 'fa fa-lock'  
+```
+将此代码拷贝到adminx.py中修改即可，其中前面的fa不能修改！只改变fa-lock即可。
+
+### 设置后台某些字段为只读
+在自己创建的adminx.py中加入如下代码：
+```
+readonly_fields = ['','','']
+```
+列表中填入想设置为只读的字段即可
+
+## 在adminx.py中设置此字段增加后台自动刷新，时间可以自定义
+```
+refresh_times = [5, 10]   # 设置了两个可选择的时间，分别是5秒和10秒
+```
+
+## 新增支持安装 ```DjangoUeditor``` 富文本编辑器后可直接使用。建议源码安装。
+### 关闭HTML文本的转义
+```
+{% autoescape off %}
+
+{% endautoescape %}
+```
+用以上模板标签包裹显示的内容，取消默认的html代码转义
+
+## 新增Excel导入功能，无需设置即可使用
+
 更多详细： https://xadmin.readthedocs.io/en/latest/index.html
+

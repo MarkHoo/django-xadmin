@@ -131,8 +131,7 @@ readonly_fields = ['','','']
 refresh_times = [5, 10]   # 设置了两个可选择的时间，分别是5秒和10秒
 ```
 
-## 新增支持安装 ```DjangoUeditor``` 富文本编辑器后可直接使用。建议源码安装。
-### 关闭HTML文本的转义
+### 新增支持安装 ```DjangoUeditor``` 富文本编辑器后可直接使用。建议源码安装。关闭HTML文本自动转义：
 ```
 {% autoescape off %}
 
@@ -140,7 +139,7 @@ refresh_times = [5, 10]   # 设置了两个可选择的时间，分别是5秒和
 ```
 用以上模板标签包裹显示的内容，取消默认的html代码转义
 
-## 新增Excel导入功能，无需设置即可使用
+### 新增Excel导入功能，无需设置即可使用
 
 更多详细： https://xadmin.readthedocs.io/en/latest/index.html
 
